@@ -44,7 +44,7 @@ function ServerModuleRandomSoundEvents.SendRandomSoundEventAt(randomSoundEvent, 
     local args = {
         modName = randomSoundEvent.modName,
         eventName = randomSoundEvent.eventName,
-        soundIndex = randomSoundEvent:getRandomSoundIndex(),
+        soundIndex = soundIndex,
         x = x,
         y = y,
         z = z,
