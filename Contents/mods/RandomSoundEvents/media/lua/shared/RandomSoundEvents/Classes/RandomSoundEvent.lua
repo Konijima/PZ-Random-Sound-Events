@@ -37,12 +37,15 @@ function RandomSoundEvent:play(soundIndex, x, y, z)
         end
 
         local emitter = getWorld():getFreeEmitter();
-        emitter:setPos(x, y, z);
-        emitter:playSoundImpl(soundName, nil);
+        if emitter then
+            emitter:setPos(x, y, z);
+            emitter:playSoundImpl(soundName, false, nil);
 
-        if not SandboxVars.RandomSoundEvents.deafZombies and attractRange > 0 then
-            addSound(nil, x, y, z, attractRange, attractRange);
+            if not SandboxVars.RandomSoundEvents.deafZombies and attractRange > 0 then
+                addSound(nil, x, y, z, attractRange, attractRange);
+            end
         end
+
     end
 end
 
