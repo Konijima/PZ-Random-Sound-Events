@@ -61,6 +61,11 @@ Server.Modules.RandomSoundEvents = ServerModuleRandomSoundEvents;
 
 local ticks = 0;
 local cooldown = 0;
+
+if Server.Utils.IsSinglePlayer() then
+    cooldown = ZombRand(500, 5000);
+end
+
 local function onTick()
 
     if not isServer() and not Server.Utils.IsSinglePlayer() then
