@@ -3,7 +3,7 @@
 ## Works in Multiplayer & Singleplayer.
 
 **Tired of the old meta events?**  
-This mods give you the possibility to extend the meta experience.
+This mod give you the possibility to extend the meta experience.
 From nuke bombs to earth quakes and sirens.
 Maybe just some new animals sounds?
 
