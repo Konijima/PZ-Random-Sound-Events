@@ -68,6 +68,7 @@ end
 
 local function onTick()
 
+    -- Don't run for client
     if not isServer() and not Server.Utils.IsSinglePlayer() then
         Events.OnTick.Remove(onTick);
         return;
@@ -114,6 +115,12 @@ local function onTick()
     local soundRange = type(randomSoundEvent.soundList[soundIndex]) == "table" and randomSoundEvent.soundList[soundIndex][2] / 2 or 50;
     x = x + ZombRand(-soundRange, soundRange);
     y = y + ZombRand(-soundRange, soundRange);
+
+    -- Check if sound is in a building
+    local square = getSquare(x, y, 0);
+    if square and square:getBuilding() then
+        return; -- square is a building let try again
+    end
 
     -- Send random sound event to clients
     ServerModuleRandomSoundEvents.SendRandomSoundEventAt(randomSoundEvent, soundIndex, x, y, 0);
