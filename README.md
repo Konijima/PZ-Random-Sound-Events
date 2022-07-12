@@ -1,39 +1,50 @@
 # PZ-Random-Sound-Events
 
-## Works in Multiplayer & Singleplayer.
+### Mod works in Multiplayer & Singleplayer.
+
+<br>
 
 **Tired of the old meta events?**  
-This mod give you the possibility to extend the meta experience.
-From nuke bombs to earth quakes and sirens.
-Maybe just some new animals sounds?
+This mod give you the possibility to extend the meta experience.  
 
-Beware, sound attract zombies as it should, this can become chaotic pretty quick!
+Nuke explosion, earth quakes, raid sirens and some new wild animal sounds.  
+*Or maybe you want to make your own sound pack?*  
+
+> Beware, sound attract zombies, this can become chaotic pretty quick!
+
+<br>
 
 ## Sandbox Options
 - Deaf Zombies, they will not hear the sound events.
-- Fine tune the cooldown between the sound events.
-- Disable packs without restarting the server.
+- Fine tune the cooldown between the next sound event.
+- Disable sound packs without restarting your server.
 
-## 4 Packs Included
-Make sure to at least have one pack enabled.
+<br>
 
-- Disasters  
-  Contains 2 Earthquake sounds.
+## 4 sound packs included
+**Make sure to at least have one pack enabled.**
 
-- Sirens  
-  Contains 3 Raid Siren sounds.
+- **Disasters**  
+  *Contains 2 earthquake sounds.*
 
-- Nukes  
-  Contains 3 Nuke Explosion sounds.
+- **Sirens**  
+  *Contains 3 raid siren sounds.*
 
-- Animals  
-  Contains 3 Bear & 3 Wolf sounds.
+- **Nukes**  
+  *Contains 3 nuke explosion sounds.*
 
-Pick and choose what you want or enabled them all and disabled the pack you don't want in the Sandbox Options.
+- **Animals**  
+  *Contains 3 bear & 3 wolf sounds.*
+
+> Activate the packs that you want and if needed disabled them in the Sandbox Options.
+
+<br>
 
 ## API & Custom Sound Packs
 Make your own sound pack using the included API.
 Check how the included sound packs works and you will figure how to make your own pretty quickly.
+
+<br>
 
 Project made using [BaseMod Concept](https://github.com/Konijima/Project-Zomboid-BaseMod-Concept)
 
