@@ -7,31 +7,31 @@ local modName = "RandomSoundEvents_Animals";
 
 --- Wolf Sound
 RandomSoundEventsAPI.Add(modName, "Wolf", {
-    { "Wolf1", 50 },
-    { "Wolf2", 50 },
-    { "Wolf3", 50 },
+    { "Wolf1", 100 },
+    { "Wolf2", 100 },
+    { "Wolf3", 100 },
 });
 
 --- Bear Sound
 RandomSoundEventsAPI.Add(modName, "Bear", {
-    { "Bear1", 50 },
-    { "Bear2", 50 },
-    { "Bear3", 50 },
+    { "Bear1", 100 },
+    { "Bear2", 100 },
+    { "Bear3", 100 },
 });
 
 --- Cat Sound
 RandomSoundEventsAPI.Add(modName, "Cat", {
-    { "Cat1", 50 },
+    { "Cat1", 100 },
 });
 
 --- Boar Sound
 RandomSoundEventsAPI.Add(modName, "Boar", {
-    { "Boar1", 50 },
-    { "Boar2", 50 },
+    { "Boar1", 100 },
+    { "Boar2", 100 },
 });
 
 --- Hawk Sound
 RandomSoundEventsAPI.Add(modName, "Hawk", {
-    { "Hawk1", 50 },
-    { "Hawk2", 50 },
+    { "Hawk1", 100 },
+    { "Hawk2", 100 },
 });
