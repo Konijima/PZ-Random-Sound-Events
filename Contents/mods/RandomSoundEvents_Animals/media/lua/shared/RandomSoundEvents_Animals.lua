@@ -18,3 +18,20 @@ RandomSoundEventsAPI.Add(modName, "Bear", {
     { "Bear2", 50 },
     { "Bear3", 50 },
 });
+
+--- Cat Sound
+RandomSoundEventsAPI.Add(modName, "Cat", {
+    { "Cat1", 50 },
+});
+
+--- Boar Sound
+RandomSoundEventsAPI.Add(modName, "Boar", {
+    { "Boar1", 50 },
+    { "Boar2", 50 },
+});
+
+--- Hawk Sound
+RandomSoundEventsAPI.Add(modName, "Hawk", {
+    { "Hawk1", 50 },
+    { "Hawk2", 50 },
+});

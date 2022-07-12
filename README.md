@@ -36,7 +36,7 @@ Nuke explosion, earth quakes, raid sirens and some new wild animal sounds.
   *Contains 3 nuke explosion sounds.*
 
 - **Animals**  
-  *Contains 3 bear & 3 wolf sounds.*
+  *Contains 3 bear, 3 wolf, 2 boar, 1 cat, 2 hawk sounds.*
 
 > Activate the packs that you want and if needed disabled them in the Sandbox Options.
 

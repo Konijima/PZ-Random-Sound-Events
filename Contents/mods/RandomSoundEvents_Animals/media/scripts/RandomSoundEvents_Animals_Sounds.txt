@@ -36,4 +36,34 @@ module Base {
         clip { file = media/sound/Wolf/wolf3.ogg, distanceMax = 100, volume = 0.75, }
     }
 
+    sound Boar1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Boar/boar1.ogg, distanceMax = 100, volume = 0.75, }
+    }
+
+    sound Boar2
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Boar/boar2.ogg, distanceMax = 100, volume = 0.75, }
+    }
+
+    sound Cat1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Cat/cat1.ogg, distanceMax = 100, volume = 0.75, }
+    }
+
+    sound Hawk1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Hawk/hawk1.ogg, distanceMax = 100, volume = 0.75, }
+    }
+
+    sound Hawk2
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Hawk/hawk2.ogg, distanceMax = 100, volume = 0.75, }
+    }
+
 }
