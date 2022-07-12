@@ -63,7 +63,7 @@ local ticks = 0;
 local cooldown = 0;
 
 if Server.Utils.IsSinglePlayer() then
-    cooldown = ZombRand(500, 5000);
+    cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown, SandboxVars.RandomSoundEvents.maxCooldown);
 end
 
 local function onTick()
@@ -90,7 +90,7 @@ local function onTick()
     local randomPlayer = ServerModuleRandomSoundEvents.GetRandomOnlinePlayer();
     if not randomPlayer then
         -- No player online, then just wait a bit
-        cooldown = ZombRand(500, 1000);
+        cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown, SandboxVars.RandomSoundEvents.maxCooldown);
         return;
     end
 
@@ -119,7 +119,7 @@ local function onTick()
     ServerModuleRandomSoundEvents.SendRandomSoundEventAt(randomSoundEvent, soundIndex, x, y, 0);
 
     -- Set random cooldown
-    cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown or 500, SandboxVars.RandomSoundEvents.maxCooldown or 2000);
+    cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown, SandboxVars.RandomSoundEvents.maxCooldown);
 
 end
 Events.OnTick.Add(onTick);
