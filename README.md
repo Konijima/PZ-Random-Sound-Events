@@ -1,16 +1,18 @@
 # PZ-Random-Sound-Events
 
-### Mod works in Multiplayer & Singleplayer.
+![](https://github.com/Konijima/PZ-Random-Sound-Events/blob/master/Contents/mods/RandomSoundEvents/poster.png?raw=true)
+
+## Made for Multiplayer & works in Singleplayer
 
 <br>
 
-**Tired of the old meta events?**  
+## Tired of the old meta events?  
 This mod give you the possibility to extend the meta experience.  
 
 Nuke explosion, earth quakes, raid sirens and some new wild animal sounds.  
 *Or maybe you want to make your own sound pack?*  
 
-> Beware, sound attract zombies, this can become chaotic pretty quick!
+> Beware, sounds attract zombies, this can become chaotic pretty quick!
 
 <br>
 
