@@ -1,0 +1,21 @@
+module Base {
+
+    sound Nuke1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Nukes/nuke1.ogg, distanceMax = 2000, volume = 1, }
+    }
+
+    sound Nuke2
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Nukes/nuke2.ogg, distanceMax = 2000, volume = 1, }
+    }
+
+    sound Nuke3
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Nukes/nuke3.ogg, distanceMax = 2000, volume = 1, }
+    }
+
+}

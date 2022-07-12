@@ -1,0 +1,21 @@
+module Base {
+
+    sound Siren1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Sirens/siren1.ogg, distanceMax = 1500, volume = 1, }
+    }
+
+    sound Siren2
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Sirens/siren2.ogg, distanceMax = 1500, volume = 1, }
+    }
+
+    sound Siren3
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Sirens/siren3.ogg, distanceMax = 1500, volume = 1, }
+    }
+
+}

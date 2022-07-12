@@ -1,0 +1,5 @@
+name=Random Sound Events (Nukes)
+id=RandomSoundEvents_Nukes
+description=Nukes sound pack for Random Sound Events
+poster=poster.png
+require=RandomSoundEvents

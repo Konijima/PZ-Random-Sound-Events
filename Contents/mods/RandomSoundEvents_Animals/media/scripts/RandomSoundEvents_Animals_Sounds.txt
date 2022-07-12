@@ -1,0 +1,39 @@
+module Base {
+
+    sound Bear1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Bear/bear1.ogg, distanceMax = 100, volume = 1, }
+    }
+
+    sound Bear2
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Bear/bear2.ogg, distanceMax = 100, volume = 1, }
+    }
+
+    sound Bear3
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Bear/bear3.ogg, distanceMax = 100, volume = 1, }
+    }
+
+    sound Wolf1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Wolf/wolf1.ogg, distanceMax = 100, volume = 1, }
+    }
+
+    sound Wolf2
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Wolf/wolf2.ogg, distanceMax = 100, volume = 1, }
+    }
+
+    sound Wolf3
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/Wolf/wolf3.ogg, distanceMax = 100, volume = 1, }
+    }
+
+}

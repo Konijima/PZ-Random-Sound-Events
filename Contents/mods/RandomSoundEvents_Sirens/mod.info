@@ -1,0 +1,5 @@
+name=Random Sound Events (Sirens)
+id=RandomSoundEvents_Sirens
+description=Sirens sound pack for Random Sound Events
+poster=poster.png
+require=RandomSoundEvents

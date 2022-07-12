@@ -1,0 +1,5 @@
+name=Random Sound Events (Disasters)
+id=RandomSoundEvents_Disasters
+description=Disasters sound pack for Random Sound Events
+poster=poster.png
+require=RandomSoundEvents

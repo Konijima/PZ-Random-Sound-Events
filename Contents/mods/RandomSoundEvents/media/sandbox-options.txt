@@ -1,0 +1,40 @@
+VERSION = 1,
+
+option RandomSoundEvents.disabled = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents,
+	translation = RandomSoundEvents_disabled,
+}
+
+option RandomSoundEvents.deafZombies = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents,
+	translation = RandomSoundEvents_deafZombies,
+}
+
+option RandomSoundEvents.minCooldown = {
+	type = double,
+	default = 1000,
+	min = 100,
+	max = 10000000,
+	page = RandomSoundEvents,
+	translation = RandomSoundEvents_minCooldown,
+}
+
+option RandomSoundEvents.maxCooldown = {
+	type = double,
+	default = 5000,
+	min = 100,
+	max = 10000000,
+	page = RandomSoundEvents,
+	translation = RandomSoundEvents_maxCooldown,
+}
+
+option RandomSoundEvents.disabledMods = {
+	type = string,
+	default = ,
+	page = RandomSoundEvents,
+	translation = RandomSoundEvents_disabledMods,
+}

@@ -1,0 +1,15 @@
+module Base {
+
+    sound EarthQuake1
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/EarthQuake/earthquake1.ogg, distanceMax = 2000, volume = 1, }
+    }
+
+    sound EarthQuake2
+    {
+        category = RandomSoundEvent, loop = false, is3D = true,
+        clip { file = media/sound/EarthQuake/earthquake2.ogg, distanceMax = 2000, volume = 1, }
+    }
+
+}
