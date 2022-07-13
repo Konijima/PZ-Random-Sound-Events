@@ -48,6 +48,6 @@ Check how the included sound packs works and you will figure how to make your ow
 
 <br>
 
-Project made using [BaseMod Concept](https://github.com/Konijima/Project-Zomboid-BaseMod-Concept)
+Project made using [PZ BaseMod](https://github.com/Konijima/PZ-BaseMod)
 
 Like & Subscribe on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2834231099) 
