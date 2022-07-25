@@ -1,0 +1,20 @@
+Sandbox_EN = {
+
+    Sandbox_RandomSoundEvents_Nukes = "Random Sound Events (Nukes)",
+
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse = "Days before Nukes",
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse_tooltip = "The amount of days before nukes can start exploding.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableSpeech = "Disable Player Speech",
+    Sandbox_RandomSoundEvents_Nukes_disableSpeech_tooltip = "Disable player auto speech when a nuke explode.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableFear = "Disable Fear",
+    Sandbox_RandomSoundEvents_Nukes_disableFear_tooltip = "Disable player getting stressed and panicked during a nuke explosion.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableSickness = "Disable Sickness",
+    Sandbox_RandomSoundEvents_Nukes_disableSickness_tooltip = "Disable nukes sickness during a nuke explosion.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableBurning = "Disable Burning",
+    Sandbox_RandomSoundEvents_Nukes_disableBurning_tooltip = "Disable nukes burning during a nuke explosion.",
+
+}

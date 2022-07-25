@@ -20,30 +20,51 @@ end
 ---@param soundIndex number
 ---@param x number
 ---@param y number
----@param z number
-function RandomSoundEvent:play(soundIndex, x, y, z)
-    if isServer() then return; end
-
+---@return boolean
+function RandomSoundEvent:canPlay(soundIndex, player, x, y)
     local sound = self.soundList[soundIndex];
     if sound then
-        z = z or 0;
-
-        local soundName = sound;
-        local attractRange = 0;
-
-        if type(sound) == "table" then
-            soundName = sound[1];
-            attractRange = sound[2] or 0;
+        local success, canPlay = pcall(sound.canPlay, x, y);
+        if success then
+            return canPlay;
         end
+    end
+end
 
+---@param soundIndex number
+---@param x number
+---@param y number
+function RandomSoundEvent:play(soundIndex, x, y)
+    local sound = self.soundList[soundIndex];
+    if sound then
         local emitter = getWorld():getFreeEmitter();
         if emitter then
-            emitter:setPos(x, y, z);
-            emitter:playSoundImpl(soundName, false, nil);
+            emitter:setPos(x, y, 0);
+            local audio = emitter:playSoundImpl(sound.name, false, nil);
 
-            if not SandboxVars.RandomSoundEvents.deafZombies and attractRange > 0 then
-                addSound(nil, x, y, z, attractRange, attractRange);
+            if not SandboxVars.RandomSoundEvents.deafZombies and sound.range > 0 then
+                addSound(nil, x, y, 0, sound.range, sound.range);
             end
+
+            if sound.onPlay then
+                pcall(sound.onPlay, sound.name, sound.range, x, y);
+            end
+
+            local audioTicks = 0;
+            local function audioProcess()
+                if not emitter:isPlaying(audio)then
+                    if sound.onCompleted then
+                        pcall(sound.onCompleted, sound.name, sound.range, x, y);
+                    end
+                    Events.OnTick.Remove(audioProcess);
+                else
+                    if sound.onUpdate then
+                        pcall(sound.onUpdate, audioTicks, sound.name, sound.range, x, y);
+                    end
+                    audioTicks = audioTicks + 1;
+                end
+            end
+            Events.OnTick.Add(audioProcess);
         end
 
     end
@@ -59,7 +80,37 @@ function RandomSoundEvent:new(modName, eventName, soundList)
 
     o.modName = modName;
     o.eventName = eventName;
-    o.soundList = soundList or {};
+    o.soundList = {};
+
+    -- Process sound list
+    for _, soundEvent in ipairs(soundList) do
+        if type(soundEvent[1]) ~= "string" then error(modName .. ":" .. eventName .. ": Sound param 1 (soundName) must be a string"); end
+        local soundName = soundEvent[1];
+
+        if soundEvent[2] and type(soundEvent[2]) ~= "number" then error(modName .. ":" .. eventName .. ": Sound param 2 (soundRange) must be a number"); end
+        local soundRange = soundEvent[2] or 0;
+
+        if soundEvent[3] and type(soundEvent[3]) ~= "function" then error(modName .. ":" .. eventName .. ": Sound param 3 (soundCanPlay) must be a function"); end
+        local soundCanPlay = soundEvent[3] or function() return true; end;
+
+        if soundEvent[4] and type(soundEvent[4]) ~= "function" then error(modName .. ":" .. eventName .. ": Sound param 4 (soundOnPlay) must be a function"); end
+        local soundOnPlay = soundEvent[4] or nil;
+
+        if soundEvent[5] and type(soundEvent[5]) ~= "function" then error(modName .. ":" .. eventName .. ": Sound param 5 (soundOnUpdate) must be a function"); end
+        local soundOnUpdate = soundEvent[5] or nil;
+
+        if soundEvent[6] and type(soundEvent[6]) ~= "function" then error(modName .. ":" .. eventName .. ": Sound param 6 (soundOnCompleted) must be a function"); end
+        local soundOnCompleted = soundEvent[6] or nil;
+
+        table.insert(o.soundList, {
+            name = soundName,
+            range = soundRange,
+            canPlay = soundCanPlay,
+            onPlay = soundOnPlay,
+            onUpdate = soundOnUpdate,
+            onCompleted = soundOnCompleted,
+        });
+    end
 
     return o;
 end

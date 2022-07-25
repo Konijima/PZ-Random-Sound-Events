@@ -70,6 +70,7 @@ local function onTick()
 
     -- Don't run for client
     if not isServer() and not Server.Utils.IsSinglePlayer() then
+        Server.Log("Client side detected, disabling OnTick!");
         Events.OnTick.Remove(onTick);
         return;
     end
@@ -90,6 +91,7 @@ local function onTick()
     -- Pick random online player
     local randomPlayer = ServerModuleRandomSoundEvents.GetRandomOnlinePlayer();
     if not randomPlayer then
+        Server.Log("No player online, skipping...");
         -- No player online, then just wait a bit
         cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown, SandboxVars.RandomSoundEvents.maxCooldown);
         return;
@@ -110,16 +112,30 @@ local function onTick()
         return;
     end
 
+    local soundEvent = randomSoundEvent.soundList[soundIndex];
+    if not soundEvent then
+        Server.Log("Invalid sound, skipping...");
+        cooldown = ZombRand(60, 120);
+        return;
+    end
+
     -- Get position and add random range
     local x, y = randomPlayer:getX(), randomPlayer:getY();
-    local soundRange = type(randomSoundEvent.soundList[soundIndex]) == "table" and randomSoundEvent.soundList[soundIndex][2] / 2 or 50;
-    x = x + ZombRand(-soundRange, soundRange);
-    y = y + ZombRand(-soundRange, soundRange);
+    x = x + ZombRand(-soundEvent.range, soundEvent.range);
+    y = y + ZombRand(-soundEvent.range, soundEvent.range);
 
     -- Check if sound is in a building
     local square = getSquare(x, y, 0);
     if square and square:getBuilding() then
+        Server.Log("Sound is in a building, skipping...");
         return; -- square is a building let try again
+    end
+
+    -- Check if the sound can be played
+    if not randomSoundEvent:canPlay(soundIndex, randomPlayer, x, y) then
+        Server.Log("Sound cant play, skipping...");
+        cooldown = ZombRand(60, 120);
+        return;
     end
 
     -- Send random sound event to clients

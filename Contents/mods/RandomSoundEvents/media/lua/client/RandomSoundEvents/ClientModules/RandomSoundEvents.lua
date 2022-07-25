@@ -8,10 +8,10 @@ local RandomSoundEventList = require 'RandomSoundEvents/Classes/RandomSoundEvent
 local ClientModuleRandomSoundEvents = {};
 
 ---Play a random sound event at
-function ClientModuleRandomSoundEvents.PlayAt(modName, eventName, soundIndex, x, y, z)
+function ClientModuleRandomSoundEvents.PlayAt(modName, eventName, soundIndex, x, y)
     local randomSoundEvent = RandomSoundEventList[modName][eventName];
     if randomSoundEvent then
-        randomSoundEvent:play(soundIndex, x, y, z);
+        randomSoundEvent:play(soundIndex, x, y);
     end
 end
 

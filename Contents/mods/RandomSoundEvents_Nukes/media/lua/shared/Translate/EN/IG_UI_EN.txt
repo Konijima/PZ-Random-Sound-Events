@@ -1,0 +1,31 @@
+IGUI_EN = {
+
+    IGUI_RSE_Nukes_Shout_1 = "HOLY SHIT!!!",
+    IGUI_RSE_Nukes_Shout_2 = "IS THAT A NUKE?!",
+    IGUI_RSE_Nukes_Shout_3 = "WHAT THE HELL!",
+    IGUI_RSE_Nukes_Shout_4 = "WAAAAAAA!!!",
+    IGUI_RSE_Nukes_Shout_5 = "OMG!",
+    IGUI_RSE_Nukes_Shout_6 = "RUN!",
+    IGUI_RSE_Nukes_Shout_7 = "THE HECK!",
+    IGUI_RSE_Nukes_Shout_8 = "OH GOD NOT THIS!",
+    IGUI_RSE_Nukes_Shout_9 = "JESUS CHRIST HELP US!",
+    IGUI_RSE_Nukes_Shout_10 = "SHIT SHIT SHIT!!",
+    IGUI_RSE_Nukes_Shout_11 = "FUCK!!",
+    IGUI_RSE_Nukes_Shout_12 = "HELL NO!!",
+    IGUI_RSE_Nukes_Shout_13 = "IM OUTTA HERE!!",
+
+    IGUI_RSE_Nukes_Say_1 = "Meh...",
+    IGUI_RSE_Nukes_Say_2 = "Huh...",
+    IGUI_RSE_Nukes_Say_3 = "Damn it...",
+    IGUI_RSE_Nukes_Say_4 = "Nuke...",
+    IGUI_RSE_Nukes_Say_5 = "What the heck...",
+    IGUI_RSE_Nukes_Say_6 = "Arghhhh...",
+    IGUI_RSE_Nukes_Say_7 = "Errrr...",
+    IGUI_RSE_Nukes_Say_8 = "Hum, I'm not staying here...",
+    IGUI_RSE_Nukes_Say_9 = "Oh great...",
+    IGUI_RSE_Nukes_Say_10 = "Bitch please...",
+    IGUI_RSE_Nukes_Say_11 = "For real...",
+
+    IGUI_RSE_Nukes_Burn_1 = "Ouch my %1 feels like burning!",
+
+}

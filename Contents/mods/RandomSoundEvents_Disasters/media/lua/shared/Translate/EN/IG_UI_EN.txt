@@ -1,0 +1,29 @@
+IGUI_EN = {
+
+    IGUI_RSE_Disasters_Shout_1 = "HOLY SHIT!!!",
+    IGUI_RSE_Disasters_Shout_2 = "IS THAT An EARTHQUAKE?!",
+    IGUI_RSE_Disasters_Shout_3 = "WHAT THE HELL!",
+    IGUI_RSE_Disasters_Shout_4 = "WAAAAAAA!!!",
+    IGUI_RSE_Disasters_Shout_5 = "OMG!",
+    IGUI_RSE_Disasters_Shout_6 = "RUN!",
+    IGUI_RSE_Disasters_Shout_7 = "THE HECK!",
+    IGUI_RSE_Disasters_Shout_8 = "OH GOD NOT THIS!",
+    IGUI_RSE_Disasters_Shout_9 = "JESUS CHRIST HELP US!",
+    IGUI_RSE_Disasters_Shout_10 = "SHIT SHIT SHIT!!",
+    IGUI_RSE_Disasters_Shout_11 = "FUCK!!",
+    IGUI_RSE_Disasters_Shout_12 = "HELL NO!!",
+    IGUI_RSE_Disasters_Shout_13 = "IM OUTTA HERE!!",
+
+    IGUI_RSE_Disasters_Say_1 = "Meh...",
+    IGUI_RSE_Disasters_Say_2 = "Huh...",
+    IGUI_RSE_Disasters_Say_3 = "Damn it...",
+    IGUI_RSE_Disasters_Say_4 = "Earthquake...",
+    IGUI_RSE_Disasters_Say_5 = "What the heck...",
+    IGUI_RSE_Disasters_Say_6 = "Arghhhh...",
+    IGUI_RSE_Disasters_Say_7 = "Errrr...",
+    IGUI_RSE_Disasters_Say_8 = "Hum, I'm not staying here...",
+    IGUI_RSE_Disasters_Say_9 = "Oh great...",
+    IGUI_RSE_Disasters_Say_10 = "Bitch please...",
+    IGUI_RSE_Disasters_Say_11 = "For real...",
+
+}

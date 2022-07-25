@@ -1,0 +1,14 @@
+Sandbox_EN = {
+
+    Sandbox_RandomSoundEvents_Disasters = "Random Sound Events (Disasters)",
+
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse = "Days before Disasters",
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse_tooltip = "The amount of days before disasters starts.",
+
+    Sandbox_RandomSoundEvents_Disasters_disableSpeech = "Disable Player Speech",
+    Sandbox_RandomSoundEvents_Disasters_disableSpeech_tooltip = "Disable player auto speech when a disaster happen.",
+
+    Sandbox_RandomSoundEvents_Disasters_disableFear = "Disable Fear",
+    Sandbox_RandomSoundEvents_Disasters_disableFear_tooltip = "Disable player getting stressed and panicked during a disaster.",
+
+}

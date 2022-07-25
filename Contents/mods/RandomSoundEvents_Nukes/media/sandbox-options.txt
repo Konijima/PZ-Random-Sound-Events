@@ -1,0 +1,38 @@
+VERSION = 1,
+
+option RandomSoundEvents_Nukes.daysSinceApocalypse = {
+	type = double,
+	default = 14,
+	min = 0,
+	max = 999999999,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_daysSinceApocalypse,
+}
+
+option RandomSoundEvents_Nukes.disableSpeech = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_disableSpeech,
+}
+
+option RandomSoundEvents_Nukes.disableFear = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_disableFear,
+}
+
+option RandomSoundEvents_Nukes.disableSickness = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_disableSickness,
+}
+
+option RandomSoundEvents_Nukes.disableBurning = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_disableBurning,
+}

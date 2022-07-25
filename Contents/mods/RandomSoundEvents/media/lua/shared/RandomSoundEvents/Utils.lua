@@ -99,4 +99,16 @@ function Utils.JsonToTable(str)
     return json.Decode(str);
 end
 
+---Check if xy2 is in range of xy1
+---@param range number
+---@param x1 number
+---@param y1 number
+---@param x2 number
+---@param y2 number
+function Utils.IsInRange(range, x1, y1, x2, y2)
+    local dx = x1 - x2;
+    local dy = y1 - y2;
+    return dx * dx + dy * dy < range * range;
+end
+
 return Utils;
