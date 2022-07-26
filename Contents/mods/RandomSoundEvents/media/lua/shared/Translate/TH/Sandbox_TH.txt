@@ -1,7 +1,7 @@
 Sandbox_TH = {
 
-    Sandbox_RandomSoundEvents = "Random Sound Events - อีเวนต์เสียงสุ่ม",
-
+	Sandbox_RandomSoundEvents = "อีเวนต์เสียงสุ่ม",
+	
 	Sandbox_RandomSoundEvents_disabled = "ปิดการใช้งาน",
 	Sandbox_RandomSoundEvents_disabled_tooltip = "ปิดไม่ให้เกิดการสร้างอีเวนต์เสียงสุ่ม",
 
