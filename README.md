@@ -26,18 +26,18 @@ Nuke explosion, earth quakes, raid sirens and some new wild animal sounds.
 
 **Disasters**
 - Contains 2 Earthquake sounds.
-- Earth Quake will now make your stressed and panicked unless you are brave enough.
+- Earth Quake will now make you stressed and panicked unless you are brave enough.
 
 **Sirens**
 - Contains 3 Raid Siren sounds.
-- Raid Sirens will now make your stressed and panicked unless you are brave enough.
+- Raid Sirens will now make you stressed and panicked unless you are brave enough.
 
 **Nukes**
 - Contains 3 Nuke Explosion sounds.
 - Nuclear explosion can now burn your bodyparts.
-- Nuclear explosion radiation will now make your sick.
+- Nuclear explosion radiation will now make you sick.
 - Use the proper protection to be safe from the negative effects.
-- Nuclear explosion will now make your stressed and panicked unless you are brave enough.
+- Nuclear explosion will now make you stressed and panicked unless you are brave enough.
 - Hide inside a building or a vehicle to stay safe.
 
 *Activate all the packs that you want. You can disabled them in the Sandbox Options as you need.*
@@ -47,8 +47,8 @@ Make your own sound pack using the included API.
 Check how the included sound packs works and you will figure how to make your own pretty quickly.
 
 ## Thanks to
-**Riko Prushka** for the awesome poster!
-**radiusgreenhill** for the Thai translation!
+- **Riko Prushka** for the awesome poster!
+- **radiusgreenhill** for the Thai translation!
 
 <br>
 
