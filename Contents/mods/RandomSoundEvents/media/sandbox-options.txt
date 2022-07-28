@@ -31,10 +31,3 @@ option RandomSoundEvents.maxCooldown = {
 	page = RandomSoundEvents,
 	translation = RandomSoundEvents_maxCooldown,
 }
-
-option RandomSoundEvents.disabledMods = {
-	type = string,
-	default = ,
-	page = RandomSoundEvents,
-	translation = RandomSoundEvents_disabledMods,
-}
