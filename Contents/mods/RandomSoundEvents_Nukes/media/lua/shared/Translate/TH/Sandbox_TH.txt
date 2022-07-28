@@ -2,8 +2,14 @@ Sandbox_TH = {
 
     Sandbox_RandomSoundEvents_Nukes = "อีเวนต์เสียงสุ่ม (ระเบิดนิวเคลียร์)",
 
-    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse = "จำนวนวันก่อนเกิดอีเวนต์ระเบิดนิวเคลียร์",
+    Sandbox_RandomSoundEvents_Nukes_disabled = "ปิดการใช้งาน",
+    Sandbox_RandomSoundEvents_Nukes_disabled_tooltip = "ปิดการใช้งานนิวเคลียร์",
+
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse = "จำนวนวันก่อนเริ่มอีเวนต์ระเบิดนิวเคลียร์ (เริ่มต้น)",
     Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse_tooltip = "จำนวนวันก่อนที่เหตุการณ์ระเบิดนิวเคลียร์จะเริ่ม",
+
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypseEnd = "จำนวนวันก่อนจบอีเวนต์ระเบิดนิวเคลียร์ (สิ้นสุด)",
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypseEnd_tooltip = "จำนวนวันก่อนที่เหตุการณ์ระเบิดนิวเคลียร์จะสิ้นสุด",
 
     Sandbox_RandomSoundEvents_Nukes_disableSpeech = "ปิดการใช้งานคำพูดของผู้เล่น",
     Sandbox_RandomSoundEvents_Nukes_disableSpeech_tooltip = "ปิดการใช้งานคำพูดอัตโนมัติของผู้เล่นเมื่อนิวเคลียร์ระเบิด",
@@ -11,10 +17,16 @@ Sandbox_TH = {
     Sandbox_RandomSoundEvents_Nukes_disableFear = "ปิดการใช้งานความกลัว",
     Sandbox_RandomSoundEvents_Nukes_disableFear_tooltip = "ปิดการใช้งานนิวเคลียร์ระเบิดทำให้ผู้เล่นเกิดความเครียดและตื่นตระหนก",
 
-    Sandbox_RandomSoundEvents_Nukes_disableSickness = "ปิดการใช้งานความป่วย",
+    Sandbox_RandomSoundEvents_Nukes_disableSickness = "ปิดการใช้งานอาการเจ็บป่วย",
     Sandbox_RandomSoundEvents_Nukes_disableSickness_tooltip = "ปิดการใช้งานนิวเคลียร์ระเบิดทำให้ผู้เล่นป่วย",
 
     Sandbox_RandomSoundEvents_Nukes_disableBurning = "ปิดการใช้งานไฟลุกไหม้",
     Sandbox_RandomSoundEvents_Nukes_disableBurning_tooltip = "ปิดการใช้งานนิวเคลียร์ระเบิดทำให้เกิดไฟลุกไหม้",
+
+    Sandbox_RandomSoundEvents_Nukes_burnProtectionItems = "ไอเท็มช่วยป้องกันการถูกไฟลวก",
+    Sandbox_RandomSoundEvents_Nukes_burnProtectionItems_tooltip = "ระบุรายการไอเท็มที่ช่วยปกป้องการถูกไฟลวกจากระเบิดนิวเคลียร์ (module.itemtype1;module.itemtype2)",
+    
+    Sandbox_RandomSoundEvents_Nukes_sicknessProtectionItems = "ไอเท็มช่วยป้องกันอาการเจ็บป่วย",
+    Sandbox_RandomSoundEvents_Nukes_sicknessProtectionItems_tooltip = "ระบุรายการไอเท็มที่ช่วยป้องกันอาการเจ็บป่วยจากระเบิดนิวเคลียร์ (module.itemtype1;module.itemtype2)",
 
 }
