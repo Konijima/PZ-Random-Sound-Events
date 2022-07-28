@@ -1,0 +1,20 @@
+Sandbox_FR = {
+
+    Sandbox_RandomSoundEvents_Disasters = "Random Sound Events (Catastrophes)",
+
+    Sandbox_RandomSoundEvents_Disasters_disabled = "Désactivé",
+    Sandbox_RandomSoundEvents_Disasters_disabled_tooltip = "Désactivez complètement les catastrophes.",
+
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse = "Jours avant les catastrophes (Début)",
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse_tooltip = "Le nombre de jours avant le début des catastrophes.",
+
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypseEnd = "Jours avant les catastrophes (Fin)",
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypseEnd_tooltip = "Le nombre de jours avant la fin des catastrophes.",
+
+    Sandbox_RandomSoundEvents_Disasters_disableSpeech = "Désactiver la parole du joueur",
+    Sandbox_RandomSoundEvents_Disasters_disableSpeech_tooltip = "Désactivez la parole automatique du joueur en cas de catastrophe.",
+
+    Sandbox_RandomSoundEvents_Disasters_disableFear = "Désactiver la peur",
+    Sandbox_RandomSoundEvents_Disasters_disableFear_tooltip = "Désactivez le joueur stressé et paniqué lors d'une catastrophe.",
+
+}

@@ -1,0 +1,31 @@
+IGUI_FR = {
+
+    IGUI_RSE_Nukes_Shout_1 = "SAINTE MERDE!!!",
+    IGUI_RSE_Nukes_Shout_2 = "EST-CE UNE BOMBE NUCLÉAIRE?!",
+    IGUI_RSE_Nukes_Shout_3 = "QUE DIABLE!",
+    IGUI_RSE_Nukes_Shout_4 = "WAAAAAAA!!!",
+    IGUI_RSE_Nukes_Shout_5 = "OH MON DIEU!",
+    IGUI_RSE_Nukes_Shout_6 = "COUREZ !!",
+    IGUI_RSE_Nukes_Shout_7 = "PUTAIN!",
+    IGUI_RSE_Nukes_Shout_8 = "OH DIEU PAS ÇA!",
+    IGUI_RSE_Nukes_Shout_9 = "JÉSUS-CHRIST AIDE-NOUS !!",
+    IGUI_RSE_Nukes_Shout_10 = "MERDE MERDE MERDE!!",
+    IGUI_RSE_Nukes_Shout_11 = "MERDE!!",
+    IGUI_RSE_Nukes_Shout_12 = "SÛREMENT PAS!!!",
+    IGUI_RSE_Nukes_Shout_13 = "JE ME TIRE!!",
+
+    IGUI_RSE_Nukes_Say_1 = "Meh...",
+    IGUI_RSE_Nukes_Say_2 = "Huh...",
+    IGUI_RSE_Nukes_Say_3 = "Bon sang...",
+    IGUI_RSE_Nukes_Say_4 = "Bombe nucléaire...",
+    IGUI_RSE_Nukes_Say_5 = "Que diable...",
+    IGUI_RSE_Nukes_Say_6 = "Arghhhh...",
+    IGUI_RSE_Nukes_Say_7 = "Errrr...",
+    IGUI_RSE_Nukes_Say_8 = "Hum, je ne reste pas ici...",
+    IGUI_RSE_Nukes_Say_9 = "Oh génial...",
+    IGUI_RSE_Nukes_Say_10 = "S'il te plait...",
+    IGUI_RSE_Nukes_Say_11 = "Pour de vrai...",
+
+    IGUI_RSE_Nukes_Burn_1 = "Aïe mon %1 est en train de brûler !",
+
+}
