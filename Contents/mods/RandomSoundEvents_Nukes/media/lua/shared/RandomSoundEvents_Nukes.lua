@@ -6,12 +6,32 @@ local RandomSoundEventsAPI = require 'RandomSoundEvents/Classes/RandomSoundEvent
 
 local modName = "RandomSoundEvents_Nukes";
 
--- Server Function
-local function canPlay(player, x, y)
-    return getGameTime():getWorldAgeHours() / 24 >= SandboxVars.RandomSoundEvents_Nukes.daysSinceApocalypse;
+local function getBurnProtectionItemList()
+    return luautils.split(SandboxVars.RandomSoundEvents_Nukes.burnProtectionItems, ";");
 end
 
--- Client Function
+local function getSicknessProtectionItemList()
+    return luautils.split(SandboxVars.RandomSoundEvents_Nukes.sicknessProtectionItems, ";");
+end
+
+local function isPlayerProtectedFromSickness(playerObj)
+    local inventory = playerObj:getInventory();
+    local list = getSicknessProtectionItemList();
+    for i = 1, #list do
+        local fullType = list[i];
+
+    end
+end
+
+-- CAN PLAY
+-- Server Function to validate if the sound event can play
+local function canPlay(player, x, y)
+    local worldAge = getGameTime():getWorldAgeHours() / 24;
+    return not SandboxVars.RandomSoundEvents_Nukes.disabled and worldAge >= SandboxVars.RandomSoundEvents_Nukes.daysSinceApocalypse and worldAge < SandboxVars.RandomSoundEvents_Nukes.daysSinceApocalypseEnd;
+end
+
+-- ON PLAY
+-- Client Function triggered when the sound event start.
 local function onPlay(soundName, soundRange, x, y)
     if SandboxVars.RandomSoundEvents_Nukes.disableFear then return; end
 
@@ -46,7 +66,8 @@ local function onPlay(soundName, soundRange, x, y)
     end
 end
 
--- Client Function
+-- ON UPDATE
+-- Client Function triggered every tick during the sound event.
 local function onUpdate(ticks, soundName, soundRange, x, y)
     for i = 0, 3 do
         local player = getSpecificPlayer(i);
@@ -105,7 +126,8 @@ local function onUpdate(ticks, soundName, soundRange, x, y)
     end
 end
 
--- Client Function
+-- ON COMPLETED
+-- Client Function triggered when the sound event is completed.
 local function onCompleted(soundName, soundRange, x, y)
     for i = 0, 3 do
         local player = getSpecificPlayer(i);

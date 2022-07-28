@@ -3,13 +3,14 @@ local RandomSoundEvent = ISBaseObject:derive("RandomSoundEvent");
 
 ---@return boolean
 function RandomSoundEvent:isDisabled()
-    local disabledMods = SandboxVars.RandomSoundEvents.disabledMods or "";
-    local disabled = luautils.split(disabledMods, ",");
-    for i = 1, #disabled do
-        if disabled[i] == self.modName then
-            return true;
-        end
-    end
+    --local disabledMods = SandboxVars.RandomSoundEvents.disabledMods or "";
+    --local disabled = luautils.split(disabledMods, ",");
+    --for i = 1, #disabled do
+    --    if disabled[i] == self.modName then
+    --        return true;
+    --    end
+    --end
+    return false;
 end
 
 ---@return number

@@ -2,8 +2,14 @@ Sandbox_EN = {
 
     Sandbox_RandomSoundEvents_Nukes = "Random Sound Events (Nukes)",
 
-    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse = "Days before Nukes",
-    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse_tooltip = "The amount of days before nukes can start exploding.",
+    Sandbox_RandomSoundEvents_Nukes_disabled = "Disabled",
+    Sandbox_RandomSoundEvents_Nukes_disabled_tooltip = "Disable nukes completely.",
+
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse = "Days before Nukes (Start)",
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse_tooltip = "The amount of days before nukes start exploding.",
+
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypseEnd = "Days before Nukes (End)",
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypseEnd_tooltip = "The amount of days before nukes stop exploding.",
 
     Sandbox_RandomSoundEvents_Nukes_disableSpeech = "Disable Player Speech",
     Sandbox_RandomSoundEvents_Nukes_disableSpeech_tooltip = "Disable player auto speech when a nuke explode.",
@@ -16,5 +22,11 @@ Sandbox_EN = {
 
     Sandbox_RandomSoundEvents_Nukes_disableBurning = "Disable Burning",
     Sandbox_RandomSoundEvents_Nukes_disableBurning_tooltip = "Disable nukes burning during a nuke explosion.",
+
+    Sandbox_RandomSoundEvents_Nukes_burnProtectionItems = "Burn Protection Items",
+    Sandbox_RandomSoundEvents_Nukes_burnProtectionItems_tooltip = "List of item that protect from nuke's burn. (module.itemtype1;module.itemtype2)",
+
+    Sandbox_RandomSoundEvents_Nukes_sicknessProtectionItems = "Sickness Protection Items",
+    Sandbox_RandomSoundEvents_Nukes_sicknessProtectionItems_tooltip = "List of item that protect from nuke's sickness. (module.itemtype1;module.itemtype2)",
 
 }
