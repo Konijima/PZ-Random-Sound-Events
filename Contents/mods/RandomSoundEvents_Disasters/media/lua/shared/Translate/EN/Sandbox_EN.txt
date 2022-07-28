@@ -2,8 +2,14 @@ Sandbox_EN = {
 
     Sandbox_RandomSoundEvents_Disasters = "Random Sound Events (Disasters)",
 
-    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse = "Days before Disasters",
-    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse_tooltip = "The amount of days before disasters starts.",
+    Sandbox_RandomSoundEvents_Disasters_disabled = "Disabled",
+    Sandbox_RandomSoundEvents_Disasters_disabled_tooltip = "Disable disasters completely.",
+
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse = "Days before Disasters (Start)",
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse_tooltip = "The amount of days before disasters start.",
+
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypseEnd = "Days before Disasters (End)",
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypseEnd_tooltip = "The amount of days before disasters end.",
 
     Sandbox_RandomSoundEvents_Disasters_disableSpeech = "Disable Player Speech",
     Sandbox_RandomSoundEvents_Disasters_disableSpeech_tooltip = "Disable player auto speech when a disaster happen.",

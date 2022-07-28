@@ -1,12 +1,28 @@
 VERSION = 1,
 
+option RandomSoundEvents_Disasters.disabled = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Disasters,
+	translation = RandomSoundEvents_Disasters_disabled,
+}
+
 option RandomSoundEvents_Disasters.daysSinceApocalypse = {
 	type = double,
-	default = 7,
+	default = 14,
 	min = 0,
 	max = 999999999,
 	page = RandomSoundEvents_Disasters,
 	translation = RandomSoundEvents_Disasters_daysSinceApocalypse,
+}
+
+option RandomSoundEvents_Disasters.daysSinceApocalypseEnd = {
+	type = double,
+	default = 999999999,
+	min = 0,
+	max = 999999999,
+	page = RandomSoundEvents_Disasters,
+	translation = RandomSoundEvents_Disasters_daysSinceApocalypseEnd,
 }
 
 option RandomSoundEvents_Disasters.disableSpeech = {
