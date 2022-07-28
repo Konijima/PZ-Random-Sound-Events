@@ -1,0 +1,33 @@
+VERSION = 1,
+
+option RandomSoundEvents_Sirens.disabled = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Sirens,
+	translation = RandomSoundEvents_Sirens_disabled,
+}
+
+option RandomSoundEvents_Sirens.daysSinceApocalypse = {
+	type = double,
+	default = 7,
+	min = 0,
+	max = 999999999,
+	page = RandomSoundEvents_Sirens,
+	translation = RandomSoundEvents_Sirens_daysSinceApocalypse,
+}
+
+option RandomSoundEvents_Sirens.daysSinceApocalypseEnd = {
+	type = double,
+	default = 30,
+	min = 0,
+	max = 999999999,
+	page = RandomSoundEvents_Sirens,
+	translation = RandomSoundEvents_Sirens_daysSinceApocalypseEnd,
+}
+
+option RandomSoundEvents_Sirens.disableFear = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Sirens,
+	translation = RandomSoundEvents_Sirens_disableFear,
+}
