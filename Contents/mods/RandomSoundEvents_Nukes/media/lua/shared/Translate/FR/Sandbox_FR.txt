@@ -1,0 +1,32 @@
+Sandbox_FR = {
+
+    Sandbox_RandomSoundEvents_Nukes = "Random Sound Events (Bombe nucléaire)",
+
+    Sandbox_RandomSoundEvents_Nukes_disabled = "Désactivé",
+    Sandbox_RandomSoundEvents_Nukes_disabled_tooltip = "Désactivez complètement les armes nucléaires.",
+
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse = "Jours avant les armes nucléaires (Début)",
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypse_tooltip = "Le nombre de jours avant que les armes nucléaires commencent à exploser.",
+
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypseEnd = "Jours avant les armes nucléaires (Fin)",
+    Sandbox_RandomSoundEvents_Nukes_daysSinceApocalypseEnd_tooltip = "Le nombre de jours avant que les armes nucléaires arrêtent d'exploser.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableSpeech = "Désactiver la parole du joueur",
+    Sandbox_RandomSoundEvents_Nukes_disableSpeech_tooltip = "Désactiver la voix automatique du joueur lorsqu'une bombe nucléaire explose.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableFear = "Désactiver la peur",
+    Sandbox_RandomSoundEvents_Nukes_disableFear_tooltip = "Désactivez le joueur stressé et paniqué lors d'une explosion nucléaire.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableSickness = "Désactiver la maladie",
+    Sandbox_RandomSoundEvents_Nukes_disableSickness_tooltip = "Désactiver la maladie des armes nucléaires lors d'une explosion nucléaire.",
+
+    Sandbox_RandomSoundEvents_Nukes_disableBurning = "Désactiver les brûlures",
+    Sandbox_RandomSoundEvents_Nukes_disableBurning_tooltip = "Désactivez les armes nucléaires qui brûlent lors d'une explosion nucléaire.",
+
+    Sandbox_RandomSoundEvents_Nukes_burnProtectionItems = "Articles de protection contre les brûlures",
+    Sandbox_RandomSoundEvents_Nukes_burnProtectionItems_tooltip = "Liste des objets qui protègent des brûlures nucléaires. (module.itemtype1;module.itemtype2)",
+
+    Sandbox_RandomSoundEvents_Nukes_sicknessProtectionItems = "Articles de protection contre la maladie",
+    Sandbox_RandomSoundEvents_Nukes_sicknessProtectionItems_tooltip = "Liste des éléments qui protègent de la maladie nucléaire. (module.itemtype1;module.itemtype2)",
+
+}

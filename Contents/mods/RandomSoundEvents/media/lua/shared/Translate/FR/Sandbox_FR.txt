@@ -1,0 +1,17 @@
+Sandbox_FR = {
+
+    Sandbox_RandomSoundEvents = "Random Sound Events",
+
+    Sandbox_RandomSoundEvents_disabled = "Désactivé",
+    Sandbox_RandomSoundEvents_disabled_tooltip = "Désactivez les événements sonores aléatoires.",
+
+    Sandbox_RandomSoundEvents_deafZombies = "Zombies sourds",
+    Sandbox_RandomSoundEvents_deafZombies_tooltip = "Les zombies n'entendent pas les sons et ne les suivront pas.",
+
+    Sandbox_RandomSoundEvents_minCooldown = "Temps de recharge minimal",
+    Sandbox_RandomSoundEvents_minCooldown_tooltip = "Définissez le nombre minimum de ticks avant que le prochain événement sonore aléatoire se déclenche.",
+
+    Sandbox_RandomSoundEvents_maxCooldown = "Temps de recharge maximal",
+    Sandbox_RandomSoundEvents_maxCooldown_tooltip = "Définissez le nombre maximal de ticks avant que le prochain événement sonore aléatoire se déclenche.",
+
+}
