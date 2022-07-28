@@ -8,16 +8,10 @@ Sandbox_TH = {
 	Sandbox_RandomSoundEvents_deafZombies = "ซอมบี้ไม่ได้ยินเสียง",
 	Sandbox_RandomSoundEvents_deafZombies_tooltip = "ซอมบี้จะไม่ได้ยินเสียงและจะไม่เดินไปยังตำแหน่งต้นกำเนิดของเสียง",
 
-	Sandbox_RandomSoundEvents_randomRange = "ระยะการสุ่ม",
-	Sandbox_RandomSoundEvents_randomRange_tooltip = "ระยะการสุ่มจะนับจากตำแหน่งของผู้เล่นที่จะเรียกใช้อีเวนต์เสียงด้วยช่วงระยะที่กำหนดเท่านั้น",
-
 	Sandbox_RandomSoundEvents_minCooldown = "คูลดาวน์ต่ำสุด",
 	Sandbox_RandomSoundEvents_minCooldown_tooltip = "กำหนดค่าขั้นต่ำของช่วงระยะเวลาการอัปเดตข้อมูลเซิฟเวอร์ (Server Tick) ก่อนที่จะเรียกใช้อีเวนต์เสียงสุ่มครั้งต่อไป",
 
 	Sandbox_RandomSoundEvents_maxCooldown = "คูลดาวน์สูงสุด",
 	Sandbox_RandomSoundEvents_maxCooldown_tooltip = "กำหนดค่าสูงสุดของระยะเวลาการอัปเดตข้อมูลเซิฟเวอร์ (Server Tick) ก่อนที่จะเรียกใช้อีเวนต์เสียงสุ่มครั้งต่อไป",
-
-	Sandbox_RandomSoundEvents_disabledMods = "ปิดการใช้งานแพ็กเสียงเสริม",
-	Sandbox_RandomSoundEvents_disabledMods_tooltip = "ปิดการใช้งานแพ็กเสียงเสริม กรอกชื่อของแพ็กเสียง เช่น: RandomSoundEvents_Sirens,RandomSoundEvents_Animals เพื่อปิดการใช้งานแพ็กเสียงนั้น",
 
 }
