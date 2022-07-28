@@ -47,8 +47,8 @@ Make your own sound pack using the included API.
 Check how the included sound packs works and you will figure how to make your own pretty quickly.
 
 ## Thanks to
-**Riko Prushka** for the awesome poster!
-**radiusgreenhill** for the Thai translation!
+- **Riko Prushka** for the awesome poster!
+- **radiusgreenhill** for the Thai translation!
 
 <br>
 
