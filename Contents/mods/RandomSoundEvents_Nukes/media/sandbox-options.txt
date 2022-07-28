@@ -1,12 +1,28 @@
 VERSION = 1,
 
+option RandomSoundEvents_Nukes.disabled = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_disabled,
+}
+
 option RandomSoundEvents_Nukes.daysSinceApocalypse = {
 	type = double,
-	default = 14,
+	default = 7,
 	min = 0,
 	max = 999999999,
 	page = RandomSoundEvents_Nukes,
 	translation = RandomSoundEvents_Nukes_daysSinceApocalypse,
+}
+
+option RandomSoundEvents_Nukes.daysSinceApocalypseEnd = {
+	type = double,
+	default = 30,
+	min = 0,
+	max = 999999999,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_daysSinceApocalypseEnd,
 }
 
 option RandomSoundEvents_Nukes.disableSpeech = {
@@ -35,4 +51,18 @@ option RandomSoundEvents_Nukes.disableBurning = {
 	default = false,
 	page = RandomSoundEvents_Nukes,
 	translation = RandomSoundEvents_Nukes_disableBurning,
+}
+
+option RandomSoundEvents_Nukes.burnProtectionItems = {
+	type = string,
+	default = Base.HazmatSuit;Base.Hat_GasMask;Base.Hat_Fireman;Base.Jacket_Fireman;Base.Trousers_Fireman,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_burnProtectionItems,
+}
+
+option RandomSoundEvents_Nukes.sicknessProtectionItems = {
+	type = string,
+	default = Base.HazmatSuit;Base.Hat_GasMask,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_sicknessProtectionItems,
 }
