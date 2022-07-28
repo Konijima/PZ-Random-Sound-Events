@@ -35,7 +35,7 @@ Nuke explosion, earth quakes, raid sirens and some new wild animal sounds.
 **Nukes**
 - Contains 3 Nuke Explosion sounds.
 - Nuclear explosion can now burn your bodyparts.
-- Nuclear explosion radiation will now make your sick.
+- Nuclear explosion radiation will now make you sick.
 - Use the proper protection to be safe from the negative effects.
 - Nuclear explosion will now make you stressed and panicked unless you are brave enough.
 - Hide inside a building or a vehicle to stay safe.
