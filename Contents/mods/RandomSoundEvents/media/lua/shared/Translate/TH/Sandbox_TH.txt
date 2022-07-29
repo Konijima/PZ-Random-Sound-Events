@@ -1,0 +1,17 @@
+Sandbox_TH = {
+
+	Sandbox_RandomSoundEvents = "อีเวนต์เสียงสุ่ม",
+	
+	Sandbox_RandomSoundEvents_disabled = "ปิดการใช้งาน",
+	Sandbox_RandomSoundEvents_disabled_tooltip = "ปิดไม่ให้เกิดการสร้างอีเวนต์เสียงสุ่ม",
+
+	Sandbox_RandomSoundEvents_deafZombies = "ซอมบี้ไม่ได้ยินเสียง",
+	Sandbox_RandomSoundEvents_deafZombies_tooltip = "ซอมบี้จะไม่ได้ยินเสียงและจะไม่เดินไปยังตำแหน่งต้นกำเนิดของเสียง",
+
+	Sandbox_RandomSoundEvents_minCooldown = "คูลดาวน์ต่ำสุด",
+	Sandbox_RandomSoundEvents_minCooldown_tooltip = "กำหนดค่าขั้นต่ำของช่วงระยะเวลาการอัปเดตข้อมูลเซิฟเวอร์ (Server Tick) ก่อนที่จะเรียกใช้อีเวนต์เสียงสุ่มครั้งต่อไป",
+
+	Sandbox_RandomSoundEvents_maxCooldown = "คูลดาวน์สูงสุด",
+	Sandbox_RandomSoundEvents_maxCooldown_tooltip = "กำหนดค่าสูงสุดของระยะเวลาการอัปเดตข้อมูลเซิฟเวอร์ (Server Tick) ก่อนที่จะเรียกใช้อีเวนต์เสียงสุ่มครั้งต่อไป",
+
+}

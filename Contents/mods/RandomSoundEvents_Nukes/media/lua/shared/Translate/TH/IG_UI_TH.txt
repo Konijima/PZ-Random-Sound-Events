@@ -1,0 +1,31 @@
+IGUI_TH = {
+
+    IGUI_RSE_Nukes_Shout_1 = "เหยดแม่!!!",
+    IGUI_RSE_Nukes_Shout_2 = "นิวเคลียร์ใช่ป่ะวะ?!",
+    IGUI_RSE_Nukes_Shout_3 = "เหี้ยไรวะนั่น!",
+    IGUI_RSE_Nukes_Shout_4 = "อ๊ากกกกก!!!",
+    IGUI_RSE_Nukes_Shout_5 = "บ้าไปแล้ว!",
+    IGUI_RSE_Nukes_Shout_6 = "วิ่ง!",
+    IGUI_RSE_Nukes_Shout_7 = "อะไรวะ!",
+    IGUI_RSE_Nukes_Shout_8 = "พระเจ้าช่วย!",
+    IGUI_RSE_Nukes_Shout_9 = "ฉิบหาย!",
+    IGUI_RSE_Nukes_Shout_10 = "แม่งเอ้ย แม่งเอ้ย!!",
+    IGUI_RSE_Nukes_Shout_11 = "เหี้ย!!",
+    IGUI_RSE_Nukes_Shout_12 = "ไม่นะ!!",
+    IGUI_RSE_Nukes_Shout_13 = "อยู่ไม่ได้แล้วโว้ย!!",
+
+    IGUI_RSE_Nukes_Say_1 = "เวร...",
+    IGUI_RSE_Nukes_Say_2 = "อะไรวะนั่น...",
+    IGUI_RSE_Nukes_Say_3 = "แม่งเอ้ย...",
+    IGUI_RSE_Nukes_Say_4 = "นิวเคลียร์ลง...",
+    IGUI_RSE_Nukes_Say_5 = "เหี้ยอะไรวะเนี่ย...",
+    IGUI_RSE_Nukes_Say_6 = "อ๊ากกก...",
+    IGUI_RSE_Nukes_Say_7 = "ไอ้ห่า...",
+    IGUI_RSE_Nukes_Say_8 = "อพยพกันเถอะ...",
+    IGUI_RSE_Nukes_Say_9 = "ไม่ได้หูฝาดไปใช่ไหม...",
+    IGUI_RSE_Nukes_Say_10 = "เหยดแม่...",
+    IGUI_RSE_Nukes_Say_11 = "ไม่ใช่เรื่องจริงใช่ไหม...",
+
+    IGUI_RSE_Nukes_Burn_1 = "อ๊าก... ไฟลวก%1!",
+
+}
