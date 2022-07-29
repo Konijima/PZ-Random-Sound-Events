@@ -1,17 +1,17 @@
 Sandbox_EN = {
 
-    Sandbox_RandomSoundEvents_Sirens = "Random Sound Events (Sirènes)",
+    Sandbox_RandomSoundEvents_Sirens = "Random Sound Events (Sirens)",
 
-    Sandbox_RandomSoundEvents_Sirens_disabled = "Désactivé",
-    Sandbox_RandomSoundEvents_Sirens_disabled_tooltip = "Désactivez complètement les sirènes.",
+    Sandbox_RandomSoundEvents_Sirens_disabled = "Disabled",
+    Sandbox_RandomSoundEvents_Sirens_disabled_tooltip = "Disable sirens completely.",
 
-    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypse = "Jours avant les sirènes (Début)",
-    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypse_tooltip = "Le nombre de jours avant le déclenchement des sirènes.",
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypse = "Days before Sirens (Start)",
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypse_tooltip = "The amount of days before sirens start.",
 
-    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypseEnd = "Jours avant les sirènes (Fin)",
-    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypseEnd_tooltip = "Le nombre de jours avant l'arrêt des sirènes.",
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypseEnd = "Days before Sirens (End)",
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypseEnd_tooltip = "The amount of days before sirens stop.",
 
-    Sandbox_RandomSoundEvents_Sirens_disableFear = "Désactiver la peur",
-    Sandbox_RandomSoundEvents_Sirens_disableFear_tooltip = "Désactiver le joueur stressé et paniqué pendant une sirène.",
+    Sandbox_RandomSoundEvents_Sirens_disableFear = "Disable Fear",
+    Sandbox_RandomSoundEvents_Sirens_disableFear_tooltip = "Disable player getting stressed and panicked during a siren.",
 
 }
