@@ -1,0 +1,20 @@
+Sandbox_TH = {
+
+    Sandbox_RandomSoundEvents_Disasters = "อีเวนต์เสียงสุ่ม (ภัยพิบัติ)",
+
+    Sandbox_RandomSoundEvents_Disasters_disabled = "ปิดการใช้งาน",
+    Sandbox_RandomSoundEvents_Disasters_disabled_tooltip = "ปิดการใช้งานภัยพิบัติ",
+
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse = "จำนวนวันก่อนเริ่มภัยพิบัติ (เริ่มต้น)",
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypse_tooltip = "จำนวนวันก่อนที่ภัยพิบัติจะเริ่ม",
+
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypseEnd = "จำนวนวันก่อนจบภัยพิบัติ (สิ้นสุด)",
+    Sandbox_RandomSoundEvents_Disasters_daysSinceApocalypseEnd_tooltip = "จำนวนวันก่อนที่ภัยพิบัติจะสิ้นสุด",
+
+    Sandbox_RandomSoundEvents_Disasters_disableSpeech = "ปิดการใช้งานคำพูดของผู้เล่น",
+    Sandbox_RandomSoundEvents_Disasters_disableSpeech_tooltip = "ปิดการใช้งานคำพูดอัตโนมัติของผู้เล่นเมื่อเกิดภัยพิบัติ",
+
+    Sandbox_RandomSoundEvents_Disasters_disableFear = "ปิดการใช้งานความกลัว",
+    Sandbox_RandomSoundEvents_Disasters_disableFear_tooltip = "ปิดการใช้งานภัยพิบัติทำให้ผู้เล่นเกิดความเครียดและตื่นตระหนก",
+
+}

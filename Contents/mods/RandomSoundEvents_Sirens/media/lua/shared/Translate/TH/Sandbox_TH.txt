@@ -1,0 +1,17 @@
+Sandbox_TH = {
+
+    Sandbox_RandomSoundEvents_Sirens = "อีเวนต์เสียงสุ่ม (ไซเรน)",
+
+    Sandbox_RandomSoundEvents_Sirens_disabled = "ปิดการใช้งาน",
+    Sandbox_RandomSoundEvents_Sirens_disabled_tooltip = "ปิดการใช้งานเสียงไซเรน",
+
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypse = "จำนวนวันก่อนเริ่มเสียงไซเรน (เริ่มต้น)",
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypse_tooltip = "จำนวนวันก่อนที่เหตุการณ์เสียงไซเรนจะเริ่ม",
+
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypseEnd = "จำนวนวันก่อนจบเสียงไซเรน (สิ้นสุด)",
+    Sandbox_RandomSoundEvents_Sirens_daysSinceApocalypseEnd_tooltip = "จำนวนวันก่อนที่เหตุการณ์เสียงไซเรนจะสิ้นสุด",
+
+    Sandbox_RandomSoundEvents_Sirens_disableFear = "ปิดการใช้งานความกลัว",
+    Sandbox_RandomSoundEvents_Sirens_disableFear_tooltip = "ปิดการใช้งานเสียงไซเรนทำให้ผู้เล่นเกิดความเครียดและตื่นตระหนก",
+
+}
