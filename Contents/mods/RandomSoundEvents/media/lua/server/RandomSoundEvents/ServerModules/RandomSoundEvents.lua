@@ -59,63 +59,66 @@ Server.Modules.RandomSoundEvents = ServerModuleRandomSoundEvents;
 
 ------------------------------------------------------------------------------------------------------------------------
 
-local ticks = 0;
 local cooldown = 0;
+local _lastMinute;
 
-if Server.Utils.IsSinglePlayer() then
-    cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown, SandboxVars.RandomSoundEvents.maxCooldown);
+local function setRandomCooldown(min, max)
+    cooldown = getGameTime():getMinutesStamp() + ZombRand(min or SandboxVars.RandomSoundEvents.minCooldownMinutes, max or SandboxVars.RandomSoundEvents.maxCooldownMinutes);
 end
+
+--- Set intial random cooldown
+setRandomCooldown();
 
 local function onTick()
 
-    -- Don't run for client
-    if not isServer() and not Server.Utils.IsSinglePlayer() then
-        Server.Log("Client side detected, disabling OnTick!");
-        Events.OnTick.Remove(onTick);
-        return;
+    --- Print time left for next event
+    if _lastMinute ~= getGameTime():getMinutesStamp() then
+        _lastMinute = getGameTime():getMinutesStamp();
+        if isDebugEnabled() then
+            Server.Log(tostring( cooldown - _lastMinute ));
+        end
     end
 
-    -- Wait the cooldown
-    if cooldown > 0 then
-        cooldown = cooldown - 1;
+    -- Wait the cooldown in minutes
+    if cooldown > getGameTime():getMinutesStamp() then
         return;
     end
-
-    -- Limit updates to every 30 ticks
-    if ticks < 30 then
-        ticks = ticks + 1;
-        return;
-    end
-    ticks = 0;
 
     -- Pick random online player
     local randomPlayer = ServerModuleRandomSoundEvents.GetRandomOnlinePlayer();
     if not randomPlayer then
-        Server.Log("No player online, skipping...");
-        -- No player online, then just wait a bit
-        cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown, SandboxVars.RandomSoundEvents.maxCooldown);
+        if isDebugEnabled() then
+            Server.Log("No player online, skipping...");
+        end
+        setRandomCooldown();
         return;
     end
 
     -- Pick random sound event
     local randomSoundEvent = ServerModuleRandomSoundEvents.GetRandomSoundEvent();
     if not randomSoundEvent or randomSoundEvent:isDisabled() then
-        Server.Log("GetRandomSoundEvent returned nil...");
-        cooldown = ZombRand(60, 120);
+        if isDebugEnabled() then
+            Server.Log("GetRandomSoundEvent returned nil...");
+        end
+        setRandomCooldown(1, 1);
         return;
     end
 
     local soundIndex = randomSoundEvent:getRandomSoundIndex();
     if not soundIndex or soundIndex <= 0 then
-        Server.Log("getRandomSoundIndex return " .. tostring(soundIndex) .. " for mod [" .. randomSoundEvent.modName .. "] event ["  .. randomSoundEvent.eventName .. "]")
-        cooldown = ZombRand(60, 120);
+        if isDebugEnabled() then
+            Server.Log("getRandomSoundIndex return " .. tostring(soundIndex) .. " for mod [" .. randomSoundEvent.modName .. "] event ["  .. randomSoundEvent.eventName .. "]")
+        end
+        setRandomCooldown(1, 1);
         return;
     end
 
     local soundEvent = randomSoundEvent.soundList[soundIndex];
     if not soundEvent then
-        Server.Log("Invalid sound, skipping...");
-        cooldown = ZombRand(60, 120);
+        if isDebugEnabled() then
+            Server.Log("Invalid sound, skipping...");
+        end
+        setRandomCooldown(1, 1);
         return;
     end
 
@@ -127,14 +130,18 @@ local function onTick()
     -- Check if sound is in a building
     local square = getSquare(x, y, 0);
     if square and square:getBuilding() then
-        Server.Log("Sound is in a building, skipping...");
+        if isDebugEnabled() then
+            Server.Log("Sound is in a building, skipping...");
+        end
         return; -- square is a building let try again
     end
 
     -- Check if the sound can be played
     if not randomSoundEvent:canPlay(soundIndex, randomPlayer, x, y) then
-        Server.Log("Sound cant play, skipping...");
-        cooldown = ZombRand(60, 120);
+        if isDebugEnabled() then
+            Server.Log("Sound cant play, skipping...");
+        end
+        setRandomCooldown(1, 1);
         return;
     end
 
@@ -142,9 +149,12 @@ local function onTick()
     ServerModuleRandomSoundEvents.SendRandomSoundEventAt(randomSoundEvent, soundIndex, x, y, 0);
 
     -- Set random cooldown
-    cooldown = ZombRand(SandboxVars.RandomSoundEvents.minCooldown, SandboxVars.RandomSoundEvents.maxCooldown);
-
+    setRandomCooldown();
 end
-Events.OnTick.Add(onTick);
+
+--- Run on server or singleplayer
+if not isClient() then
+    Events.OnTick.Add(onTick);
+end
 
 --- /reloadlua server/RandomSoundEvents/ServerModules/RandomSoundEvents.lua

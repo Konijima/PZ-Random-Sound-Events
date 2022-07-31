@@ -14,19 +14,19 @@ option RandomSoundEvents.deafZombies = {
 	translation = RandomSoundEvents_deafZombies,
 }
 
-option RandomSoundEvents.minCooldown = {
+option RandomSoundEvents.minCooldownMinutes = {
 	type = double,
-	default = 3000,
-	min = 100,
+	default = 60,
+	min = 1,
 	max = 10000000,
 	page = RandomSoundEvents,
 	translation = RandomSoundEvents_minCooldown,
 }
 
-option RandomSoundEvents.maxCooldown = {
+option RandomSoundEvents.maxCooldownMinutes = {
 	type = double,
-	default = 10000,
-	min = 100,
+	default = 120,
+	min = 1,
 	max = 10000000,
 	page = RandomSoundEvents,
 	translation = RandomSoundEvents_maxCooldown,
