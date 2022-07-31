@@ -55,14 +55,14 @@ option RandomSoundEvents_Nukes.disableBurning = {
 
 option RandomSoundEvents_Nukes.burnProtectionItems = {
 	type = string,
-	default = Base.HazmatSuit;Base.Hat_GasMask;Base.Hat_Fireman;Base.Jacket_Fireman;Base.Trousers_Fireman,
+	default = HazmatSuit;Hat_GasMask;Hat_Fireman;Jacket_Fireman;Trousers_Fireman,
 	page = RandomSoundEvents_Nukes,
 	translation = RandomSoundEvents_Nukes_burnProtectionItems,
 }
 
 option RandomSoundEvents_Nukes.sicknessProtectionItems = {
 	type = string,
-	default = Base.HazmatSuit;Base.Hat_GasMask,
+	default = HazmatSuit;Hat_GasMask,
 	page = RandomSoundEvents_Nukes,
 	translation = RandomSoundEvents_Nukes_sicknessProtectionItems,
 }
