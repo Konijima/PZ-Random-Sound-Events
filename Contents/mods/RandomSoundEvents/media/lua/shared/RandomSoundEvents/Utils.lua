@@ -77,4 +77,11 @@ function Utils.PlayerWorldSoundAt(x, y, z, range, target)
     end
 end
 
+--- Check if the position is inside a building
+---@return boolean
+function Utils.IsInterior(x, y, z)
+    local square = getSquare(x, y, z);
+    return square and square:getBuilding();
+end
+
 return Utils;
