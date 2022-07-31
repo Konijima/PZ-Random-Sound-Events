@@ -43,9 +43,9 @@ function RandomSoundEvent:play(soundIndex, x, y)
             emitter:setPos(x, y, 0);
             local audio = emitter:playSoundImpl(sound.name, false, nil);
 
-            if not SandboxVars.RandomSoundEvents.deafZombies and sound.range > 0 then
-                addSound(nil, x, y, 0, sound.range, sound.range);
-            end
+            -- if not SandboxVars.RandomSoundEvents.deafZombies and sound.range > 0 then
+            --     addSound(nil, x, y, 0, sound.range, sound.range);
+            -- end
 
             if sound.onPlay then
                 pcall(sound.onPlay, sound.name, sound.range, x, y);
