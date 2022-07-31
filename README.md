@@ -17,8 +17,8 @@ Nuke explosion, earth quakes, raid sirens and some new wild animal sounds.
 - New automatic player speech during events.
 - New effect system for events (Fear, Sickness, Burn/Wound).
 - Sound events now have more depth and features.
-- Deaf Zombies, they will not hear the sound events.
-- Fine tune the cooldown between the next sound event.
+- Deaf Zombies, zombies wont hear the sound events.
+- Fine tune the cooldown in-game minutes time between the next sound event.
 - Disable sound packs without restarting the server.
 
 ## 3 sound packs included
@@ -47,8 +47,10 @@ Make your own sound pack using the included API.
 Check how the included sound packs works and you will figure how to make your own pretty quickly.
 
 ## Thanks to
-- **Riko Prushka** for the awesome poster!
-- **radiusgreenhill** for the Thai translation!
+- **Riko Prushka** for the awesome poster & the Thai translation!
+
+## More Packs
+[Dying Light Sound Event Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=2839888432) by LimitedS
 
 <br>
 
