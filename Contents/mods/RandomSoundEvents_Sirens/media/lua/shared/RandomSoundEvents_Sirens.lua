@@ -30,12 +30,12 @@ local function onPlay(soundName, soundRange, x, y)
                 local stress = stats:getStress();
 
                 if player:HasTrait("Brave") then
-                    stats:setPanic(panic + 10);
-                    stats:setStress(stress + 0.10);
+                    stats:setPanic(panic + 5);
+                    stats:setStress(stress + 0.5);
                 else
                     if player:isAsleep() then player:setAsleep(false); end
-                    stats:setPanic(panic + 20);
-                    stats:setStress(stress + 0.20);
+                    stats:setPanic(panic + 10);
+                    stats:setStress(stress + 0.10);
                 end
             end
         end
@@ -61,8 +61,8 @@ local function onUpdate(ticks, soundName, soundRange, x, y)
                     local panic = stats:getPanic();
                     local stress = stats:getStress();
 
-                    stats:setPanic(panic + 0.05 * gameTimeMultiplier);
-                    stats:setStress(stress + 0.0005 * gameTimeMultiplier);
+                    stats:setPanic(panic + 0.02 * gameTimeMultiplier);
+                    stats:setStress(stress + 0.0002 * gameTimeMultiplier);
                 end
             end
 
