@@ -135,4 +135,28 @@ function Utils.IsDusk()
     return timeOfDay >= 17 and timeOfDay < 19;
 end
 
+--- Check if an item is equipped and not broken on a player
+---@param playerObj IsoPlayer
+---@param itemType string
+function Utils.IsItemEquippedAndNotBroken(playerObj, itemType)
+    local playerInv = playerObj:getInventory();
+    return playerInv and playerInv:getFirstTypeEvalRecurse(itemType, function(item)
+        return Utils.PredicateNotBroken(item) and Utils.PredicateEquipped(item);
+    end) ~= nil;
+end
+
+--- Check if an item is equipped
+---@param item InventoryItem
+---@return boolean
+function Utils.PredicateEquipped(item)
+    return item and not item:isEquipped();
+end
+
+--- Check if an item is not broken
+---@param item InventoryItem
+---@return boolean
+function Utils.PredicateNotBroken(item)
+    return item and not item:isBroken();
+end
+
 return Utils;
