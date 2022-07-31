@@ -78,10 +78,61 @@ function Utils.PlayerWorldSoundAt(x, y, z, range, target)
 end
 
 --- Check if the position is inside a building
+---@param x number
+---@param y number
+---@param z number
 ---@return boolean
 function Utils.IsInterior(x, y, z)
     local square = getSquare(x, y, z);
     return square and square:getBuilding();
+end
+
+--- Check if it's day time
+--- from 6h00 to 18h00
+---@return boolean
+function Utils.IsDay()
+    local timeOfDay = getGameTime():getTimeOfDay();
+    return timeOfDay >= 6 and timeOfDay < 18;
+end
+
+--- Check if it's morning
+--- from 00h00 to 12h00
+---@return boolean
+function Utils.IsMorning()
+    local timeOfDay = getGameTime():getTimeOfDay();
+    return timeOfDay >= 0 and timeOfDay < 12;
+end
+
+--- Check if it's afternoon
+--- from 12h00 to 18h00
+---@return boolean
+function Utils.IsAfternoon()
+    local timeOfDay = getGameTime():getTimeOfDay();
+    return timeOfDay >= 12 and timeOfDay < 18;
+end
+
+--- Check if it's evening
+--- from 18h00 to 00h00
+---@return boolean
+function Utils.IsEvening()
+    local timeOfDay = getGameTime():getTimeOfDay();
+    return timeOfDay >= 18 and timeOfDay < 24;
+end
+
+--- Check if it's dawn
+--- from 4h00 to 7h00
+---@return boolean
+function Utils.IsDawn()
+    local timeOfDay = getGameTime():getTimeOfDay();
+    return timeOfDay >= 4 and timeOfDay < 7;
+end
+
+--- Check if it's dusk
+--- from 17h00 to 19h00
+---@return boolean
+function Utils.IsDusk()
+    local timeOfDay = getGameTime():getTimeOfDay();
+    return timeOfDay >= 17 and timeOfDay < 19;
 end
 
 return Utils;
