@@ -48,4 +48,9 @@ function Utils.IsInRange(range, x1, y1, x2, y2)
     return dx * dx + dy * dy < range * range;
 end
 
+--- Get the amount of days the world exist
+function Utils.GetWorldTotalDays()
+    return getGameTime():getWorldAgeHours() / 24;
+end
+
 return Utils;
