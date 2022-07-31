@@ -14,12 +14,21 @@ local function getSicknessProtectionItemList()
     return luautils.split(SandboxVars.RandomSoundEvents_Nukes.sicknessProtectionItems, ";");
 end
 
-local function isPlayerProtectedFromSickness(playerObj)
-    local inventory = playerObj:getInventory();
-    local list = getSicknessProtectionItemList();
-    for i = 1, #list do
-        local fullType = list[i];
+local function isPlayerProtectedFromBurn(playerObj, bodyPart)
+    local itemTypes = getBurnProtectionItemList();
+    for i = 1, #itemTypes do
+        if Utils.IsItemEquippedAndNotBroken(playerObj, itemTypes[i]) then
+            return true;
+        end
+    end
+end
 
+local function isPlayerProtectedFromSickness(playerObj)
+    local itemTypes = getSicknessProtectionItemList();
+    for i = 1, #itemTypes do
+        if Utils.IsItemEquippedAndNotBroken(playerObj, itemTypes[i]) then
+            return true;
+        end
     end
 end
 
@@ -95,7 +104,9 @@ local function onUpdate(ticks, soundName, soundRange, x, y)
                             if player:HasTrait("Resilient") then
                                 multiplier = 0.5;
                             end
-                            body:setFoodSicknessLevel(sickness + 0.02 * multiplier * gameTimeMultiplier);
+                            if not isPlayerProtectedFromSickness(player) then
+                                body:setFoodSicknessLevel(sickness + 0.02 * multiplier * gameTimeMultiplier);
+                            end
                         end
                     end
     
@@ -107,11 +118,13 @@ local function onUpdate(ticks, soundName, soundRange, x, y)
                             local burn = bodyPart:getBurnTime();
                             local rand1, rand2 = ZombRand(30000), ZombRand(30000);
                             if ticks > 120 and burn == 0 and rand1 == rand2 then
-                                bodyPart:setBurnTime(1);
-    
-                                if not SandboxVars.RandomSoundEvents_Nukes.disableSpeech then
-                                    player:SayShout( getText("IGUI_RSE_Nukes_Burn_1", BodyPartType.getDisplayName(bodyPart:getType())) );
-                                    Utils.PlayerWorldSoundAt(player:getX(), player:getY(), player:getZ(), 20, player);
+                                if not isPlayerProtectedFromBurn(player, bodyPart) then
+                                    bodyPart:setBurnTime(1);
+        
+                                    if not SandboxVars.RandomSoundEvents_Nukes.disableSpeech then
+                                        player:SayShout( getText("IGUI_RSE_Nukes_Burn_1", BodyPartType.getDisplayName(bodyPart:getType())) );
+                                        Utils.PlayerWorldSoundAt(player:getX(), player:getY(), player:getZ(), 20, player);
+                                    end
                                 end
                             end
                         end
