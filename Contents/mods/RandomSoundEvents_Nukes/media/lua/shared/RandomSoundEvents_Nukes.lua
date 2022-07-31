@@ -1,6 +1,6 @@
 if not getActivatedMods():contains("RandomSoundEvents") then return; end
 
---- Load RandomSoundEventsAPI
+--- Load Utils and RandomSoundEventsAPI
 local Utils = require 'RandomSoundEvents/Utils';
 local RandomSoundEventsAPI = require 'RandomSoundEvents/Classes/RandomSoundEventsAPI';
 
@@ -26,18 +26,22 @@ end
 -- CAN PLAY
 -- Server Function to validate if the sound event can play
 local function canPlay(player, x, y)
-    local worldAge = getGameTime():getWorldAgeHours() / 24;
-    return not SandboxVars.RandomSoundEvents_Nukes.disabled and worldAge >= SandboxVars.RandomSoundEvents_Nukes.daysSinceApocalypse and worldAge < SandboxVars.RandomSoundEvents_Nukes.daysSinceApocalypseEnd;
+    local worldAge = Utils.GetWorldTotalDays();
+    return not SandboxVars.RandomSoundEvents_Nukes.disabled and 
+            worldAge >= SandboxVars.RandomSoundEvents_Nukes.daysSinceApocalypse and 
+            worldAge < SandboxVars.RandomSoundEvents_Nukes.daysSinceApocalypseEnd;
 end
 
 -- ON PLAY
 -- Client Function triggered when the sound event start.
 local function onPlay(soundName, soundRange, x, y)
+    Utils.PlayerWorldSoundAt(x, y, 0, soundRange, nil);
+    
     if SandboxVars.RandomSoundEvents_Nukes.disableFear then return; end
+    Utils.ForEachLocalPlayer(function(player)
+    
+        if not player:isDead() and not player:isGodMod() then
 
-    for playerNum = 0, 3 do
-        local player = getSpecificPlayer(playerNum);
-        if player and not player:isDead() and not player:isGodMod() then
             if Utils.IsInRange(soundRange, x, y, player:getX(), player:getY()) then
                 local stats = player:getStats();
                 local panic = stats:getPanic();
@@ -49,7 +53,7 @@ local function onPlay(soundName, soundRange, x, y)
 
                     if not SandboxVars.RandomSoundEvents_Nukes.disableSpeech then
                         player:Say( getText("IGUI_RSE_Nukes_Say_" .. ZombRand(1, 12) ) );
-                        addSound(player, player:getX(), player:getY(), player:getZ(), 10, 10);
+                        Utils.PlayerWorldSoundAt(player:getX(), player:getY(), player:getZ(), 10, player);
                     end
                 else
                     if player:isAsleep() then player:setAsleep(false); end
@@ -58,27 +62,31 @@ local function onPlay(soundName, soundRange, x, y)
 
                     if not SandboxVars.RandomSoundEvents_Nukes.disableSpeech then
                         player:SayShout( getText("IGUI_RSE_Nukes_Shout_" .. ZombRand(1, 14) ) );
-                        addSound(player, player:getX(), player:getY(), player:getZ(), 20, 20);
+                        Utils.PlayerWorldSoundAt(player:getX(), player:getY(), player:getZ(), 20, player);
                     end
                 end
             end
+
         end
-    end
+
+    end);
 end
 
 -- ON UPDATE
 -- Client Function triggered every tick during the sound event.
 local function onUpdate(ticks, soundName, soundRange, x, y)
-    for i = 0, 3 do
-        local player = getSpecificPlayer(i);
-        if player and not player:isDead() and not player:isGodMod() then
+
+    Utils.ForEachLocalPlayer(function(player)
+
+        if not player:isDead() and not player:isGodMod() then
+
             if Utils.IsInRange(soundRange, x, y, player:getX(), player:getY()) then
                 local gameTimeMultiplier = getGameTime():getMultiplier();
-
+    
                 -- Make player sick if not inside a building or vehicle
                 if not player:getCurrentBuilding() and not player:getVehicle() then
                     local body = player:getBodyDamage();
-
+    
                     -- Give sickness
                     if not SandboxVars.RandomSoundEvents_Nukes.disableSickness then
                         local sickness = body:getFoodSicknessLevel();
@@ -90,7 +98,7 @@ local function onUpdate(ticks, soundName, soundRange, x, y)
                             body:setFoodSicknessLevel(sickness + 0.02 * multiplier * gameTimeMultiplier);
                         end
                     end
-
+    
                     -- Burn body parts
                     if not SandboxVars.RandomSoundEvents_Nukes.disableBurning then
                         local parts = body:getBodyParts();
@@ -100,38 +108,41 @@ local function onUpdate(ticks, soundName, soundRange, x, y)
                             local rand1, rand2 = ZombRand(30000), ZombRand(30000);
                             if ticks > 120 and burn == 0 and rand1 == rand2 then
                                 bodyPart:setBurnTime(1);
-
+    
                                 if not SandboxVars.RandomSoundEvents_Nukes.disableSpeech then
                                     player:SayShout( getText("IGUI_RSE_Nukes_Burn_1", BodyPartType.getDisplayName(bodyPart:getType())) );
-                                    addSound(player, player:getX(), player:getY(), player:getZ(), 20, 20);
+                                    Utils.PlayerWorldSoundAt(player:getX(), player:getY(), player:getZ(), 20, player);
                                 end
                             end
                         end
                     end
                 end
-
+    
                 -- Stress the un-brave player
                 if not SandboxVars.RandomSoundEvents_Nukes.disableFear then
                     if not player:HasTrait("Brave") then
                         local stats = player:getStats();
                         local panic = stats:getPanic();
                         local stress = stats:getStress();
-
+    
                         stats:setPanic(panic + 0.05 * gameTimeMultiplier);
                         stats:setStress(stress + 0.0005 * gameTimeMultiplier);
                     end
                 end
             end
+
         end
-    end
+
+    end);
 end
 
 -- ON COMPLETED
 -- Client Function triggered when the sound event is completed.
 local function onCompleted(soundName, soundRange, x, y)
-    for i = 0, 3 do
-        local player = getSpecificPlayer(i);
-        if player and not player:isDead() and not player:isGodMod() then
+
+    Utils.ForEachLocalPlayer(function(player)
+    
+        if not player:isDead() and not player:isGodMod() then
             if Utils.IsInRange(soundRange, x, y, player:getX(), player:getY()) then
                 -- Increment player NukesSurvived stat
                 local modData = player:getModData();
@@ -140,10 +151,12 @@ local function onCompleted(soundName, soundRange, x, y)
                 modData.RandomSoundEvents.NukesSurvived = modData.RandomSoundEvents.NukesSurvived + 1;
             end
         end
-    end
+
+    end);
 end
 
 --- Nukes Sound
+--- { SoundName, Range, canPlayFunction, onPlayFunction, onUpdateFunction, onCompletedFunction },
 RandomSoundEventsAPI.Add(modName, "Nukes", {
     { "Nuke1", 1000, canPlay, onPlay, onUpdate, onCompleted },
     { "Nuke2", 1000, canPlay, onPlay, onUpdate, onCompleted },
