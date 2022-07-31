@@ -8,10 +8,10 @@ Sandbox_EN = {
     Sandbox_RandomSoundEvents_deafZombies = "Deaf Zombies",
     Sandbox_RandomSoundEvents_deafZombies_tooltip = "Zombies do not hear the sounds and won't be following it.",
 
-    Sandbox_RandomSoundEvents_minCooldown = "Min Cooldown",
-    Sandbox_RandomSoundEvents_minCooldown_tooltip = "Set the minimum amount of ticks before the next random sound event triggers.",
+    Sandbox_RandomSoundEvents_minCooldown = "Min Cooldown (Minutes)",
+    Sandbox_RandomSoundEvents_minCooldown_tooltip = "Set the minimum amount of in-game minutes before the next random sound event triggers.",
 
-    Sandbox_RandomSoundEvents_maxCooldown = "Max Cooldown",
-    Sandbox_RandomSoundEvents_maxCooldown_tooltip = "Set the maximum amount of ticks before the next random sound event triggers.",
+    Sandbox_RandomSoundEvents_maxCooldown = "Max Cooldown (Minutes)",
+    Sandbox_RandomSoundEvents_maxCooldown_tooltip = "Set the maximum amount of in-game minutes before the next random sound event triggers.",
 
 }
