@@ -53,4 +53,15 @@ function Utils.GetWorldTotalDays()
     return getGameTime():getWorldAgeHours() / 24;
 end
 
+--- Run a function on each local player
+---@param doFunction function Thefunction to call on each player
+function Utils.ForEachLocalPlayer(doFunction)
+    for playerNum = 0, 3 do
+        local player = getSpecificPlayer(playerNum);
+        if player then
+            pcall(doFunction, player);
+        end
+    end
+end
+
 return Utils;
