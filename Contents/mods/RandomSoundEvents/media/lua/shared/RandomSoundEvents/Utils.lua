@@ -64,4 +64,16 @@ function Utils.ForEachLocalPlayer(doFunction)
     end
 end
 
+--- Play a world sound at position only if zombies are not deaf
+---@param x number
+---@param y number
+---@param z number
+---@param range number
+---@param target IsoPlayer Can be set to nil
+function Utils.PlayerWorldSoundAt(x, y, z, range, target)
+    if not SandboxVars.RandomSoundEvents.deafZombies and range > 0 then
+        addSound(target, x, y, z, range, range);
+    end
+end
+
 return Utils;
