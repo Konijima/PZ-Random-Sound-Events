@@ -21,15 +21,19 @@ local function onPlay(soundName, soundRange, x, y)
     Utils.PlayerWorldSoundAt(x, y, 0, soundRange, nil);
     
     Utils.ForEachLocalPlayer(function(player)
-        if SandboxVars.RandomSoundEvents_Disasters.disableFear then return; end
-    
+        
         if not player:isDead() and not player:isGodMod() then
-
+            
             if Utils.IsInRange(soundRange, x, y, player:getX(), player:getY()) then
+                
+                -- TODO: Start random car alarm
+                
+                if SandboxVars.RandomSoundEvents_Disasters.disableFear then return; end
+                
                 local stats = player:getStats();
                 local panic = stats:getPanic();
                 local stress = stats:getStress();
-    
+                
                 if player:HasTrait("Brave") then
                     stats:setPanic(panic + 10);
                     stats:setStress(stress + 0.10);
