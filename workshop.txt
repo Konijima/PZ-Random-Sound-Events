@@ -52,6 +52,7 @@ description=- [b]Riko Prushka[/b] for the awesome poster and the Thai translatio
 description=
 description=[h2]More Packs[/h2]
 description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2839888432]Dying Light Sound Event Pack[/url] by LimitedS
+description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2848146281]Random Guns Pack[/url] by LimitedS
 description=
 description=[b]The project on Github:[/b] https://github.com/Konijima/PZ-Random-Sound-Events
 tags=Build 41;Framework;Misc;Multiplayer;Realistic;Silly/Fun
