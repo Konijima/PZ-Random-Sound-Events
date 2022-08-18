@@ -14,4 +14,7 @@ Sandbox_EN = {
     Sandbox_RandomSoundEvents_Sirens_disableFear = "Désactiver la peur",
     Sandbox_RandomSoundEvents_Sirens_disableFear_tooltip = "Désactiver le joueur stressé et paniqué pendant une sirène.",
 
+    Sandbox_RandomSoundEvents_Sirens_disableWakingUp = "Désactiver le réveil",
+    Sandbox_RandomSoundEvents_Sirens_disableWakingUp_tooltip = "Désactiver le réveil du joueur pendant une sirène.",
+    
 }

@@ -17,4 +17,7 @@ Sandbox_FR = {
     Sandbox_RandomSoundEvents_Disasters_disableFear = "Désactiver la peur",
     Sandbox_RandomSoundEvents_Disasters_disableFear_tooltip = "Désactivez le joueur stressé et paniqué lors d'une catastrophe.",
 
+    Sandbox_RandomSoundEvents_Disasters_disableWakingUp = "Désactiver le réveil",
+    Sandbox_RandomSoundEvents_Disasters_disableWakingUp_tooltip = "Désactiver le réveil du joueur lors d'une catastrophe.",
+
 }

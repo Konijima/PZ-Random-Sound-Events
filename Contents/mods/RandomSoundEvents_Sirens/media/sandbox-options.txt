@@ -31,3 +31,10 @@ option RandomSoundEvents_Sirens.disableFear = {
 	page = RandomSoundEvents_Sirens,
 	translation = RandomSoundEvents_Sirens_disableFear,
 }
+
+option RandomSoundEvents_Sirens.disableWakingUp = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Sirens,
+	translation = RandomSoundEvents_Sirens_disableWakingUp,
+}

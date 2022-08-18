@@ -39,6 +39,13 @@ option RandomSoundEvents_Nukes.disableFear = {
 	translation = RandomSoundEvents_Nukes_disableFear,
 }
 
+option RandomSoundEvents_Nukes.disableWakingUp = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Nukes,
+	translation = RandomSoundEvents_Nukes_disableWakingUp,
+}
+
 option RandomSoundEvents_Nukes.disableSickness = {
 	type = boolean,
 	default = false,

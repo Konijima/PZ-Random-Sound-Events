@@ -17,6 +17,9 @@ Sandbox_EN = {
     Sandbox_RandomSoundEvents_Nukes_disableFear = "Disable Fear",
     Sandbox_RandomSoundEvents_Nukes_disableFear_tooltip = "Disable player getting stressed and panicked during a nuke explosion.",
 
+    Sandbox_RandomSoundEvents_Nukes_disableWakingUp = "Disable Waking Up",
+    Sandbox_RandomSoundEvents_Nukes_disableWakingUp_tooltip = "Disable player getting waking up during a nuke explosion.",
+
     Sandbox_RandomSoundEvents_Nukes_disableSickness = "Disable Sickness",
     Sandbox_RandomSoundEvents_Nukes_disableSickness_tooltip = "Disable nukes sickness during a nuke explosion.",
 

@@ -17,6 +17,9 @@ Sandbox_FR = {
     Sandbox_RandomSoundEvents_Nukes_disableFear = "Désactiver la peur",
     Sandbox_RandomSoundEvents_Nukes_disableFear_tooltip = "Désactivez le joueur stressé et paniqué lors d'une explosion nucléaire.",
 
+    Sandbox_RandomSoundEvents_Nukes_disableWakingUp = "Désactiver le réveil",
+    Sandbox_RandomSoundEvents_Nukes_disableWakingUp_tooltip = "Désactiver le réveil du joueur lors d'une explosion nucléaire.",
+
     Sandbox_RandomSoundEvents_Nukes_disableSickness = "Désactiver la maladie",
     Sandbox_RandomSoundEvents_Nukes_disableSickness_tooltip = "Désactiver la maladie des armes nucléaires lors d'une explosion nucléaire.",
 

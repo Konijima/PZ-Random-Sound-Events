@@ -38,3 +38,10 @@ option RandomSoundEvents_Disasters.disableFear = {
 	page = RandomSoundEvents_Disasters,
 	translation = RandomSoundEvents_Disasters_disableFear,
 }
+
+option RandomSoundEvents_Disasters.disableWakingUp = {
+	type = boolean,
+	default = false,
+	page = RandomSoundEvents_Disasters,
+	translation = RandomSoundEvents_Disasters_disableWakingUp,
+}

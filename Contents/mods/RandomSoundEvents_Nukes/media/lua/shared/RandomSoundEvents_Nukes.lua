@@ -65,7 +65,11 @@ local function onPlay(soundName, soundRange, x, y)
                         Utils.PlayerWorldSoundAt(player:getX(), player:getY(), player:getZ(), 10, player);
                     end
                 else
-                    if player:isAsleep() then player:setAsleep(false); end
+                    if not SandboxVars.RandomSoundEvents_Nukes.disableWakingUp and player:isAsleep() then
+                        player:setAsleep(false);
+                        player:setAsleepTime(0.0);
+                        UIManager.FadeIn(player:getPlayerNum(), 1);
+                    end
                     stats:setPanic(panic + 20);
                     stats:setStress(stress + 0.20);
 
